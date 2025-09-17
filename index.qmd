@@ -1,0 +1,6 @@
+
+```{R}
+library(ggplot2)
+
+ggplot(diamonds) + geom_bar(aes(cut))
+```
