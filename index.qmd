@@ -8,6 +8,7 @@ editor: visual
 ## Plot
 
 ```{r}
+#| echo: true
 
 library(ggplot2)
 library(lubridate)
