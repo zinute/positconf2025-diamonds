@@ -1,6 +1,18 @@
+---
+title: "diamonds"
+format: html
+editor: visual
+---
 
-```{R}
+
+## Plot
+
+```{r}
+
 library(ggplot2)
+library(lubridate)
 
-ggplot(diamonds) + geom_bar(aes(cut))
+current_time <- now() 
+ggplot(data = diamonds, aes(x = carat, y = price, color = cut)) + geom_point(alpha = 0.5) + labs( title = "Diamond Price vs Carat by Cut", subtitle = paste("Generated on", format(current_time, "%Y-%m-%d %H:%M:%S")), x = "Carat", y = "Price (USD)" ) + theme_minimal()
+
 ```
